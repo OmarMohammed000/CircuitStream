@@ -6,32 +6,41 @@
 #7e4848
 */
 
-.navbar {
+.navbar,
+footer {
   background-color: #123067;
 }
-.navigation .navbar-brand {
-  color: #d47c16;
-}
-.navigation .navbar-brand:hover{
-    color: whitesmoke;
-}
-.navbar button {
-  color: #d47c16;
-}
-.navigation .nav-link {
+.navigation .navbar-brand,
+.navbar button,
+.navigation .nav-link,
+.navigation .dropdown-color, footer .text-color {
   color: #d47c16;
   font-size: large;
 }
-.navigation .nav-link:hover {
+.navigation .navbar-brand:hover,
+.navigation .dropdown-color:hover,
+.navigation .nav-link:hover,
+footer .text-color:hover
+{
   color: whitesmoke;
 }
-.navigation  .dropdown-color{
-    color: #d47c16; 
+
+.navigation .dropdown-menu {
+  background: #7e4848;
+  color: whitesmoke;
 }
-.navigation  .dropdown-color:hover{
-    color: whitesmoke;
-}
-.navigation .dropdown-menu{
-    background: #7e4848;
-    color: whitesmoke;
-}
+html, body {
+    height: 100%; 
+  }
+  
+  body {
+    position: relative;
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%; 
+  }
+  
