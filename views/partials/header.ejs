@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/bootstrap.css" />
     <script src="scripts/bootstrap.bundle.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-lg navigation">
+      <div class="container-fluid ">
+        <a class="navbar-brand fs-3  " href="../index.ejs">Circuit Stream</a>
+        <button
+          class="navbar-toggler bg-warning  " 
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+          <ul class="navbar-nav ms-5 mt-1">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="../index.ejs">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutUs">about us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../blogCreation.ejs">create  your own blog</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <span class="dropdown-color">technology</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="ar.ejs">Augmented reality and virtual reality</a></li>
+                <li><a class="dropdown-item" href="q.ejs">Quantum computing</a></li>
+                
+              </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+ 
