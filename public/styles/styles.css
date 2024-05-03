@@ -8,13 +8,13 @@
 
 .navbar,
 footer {
-  background-color: #123067;
+  background-color:  	#767b8d;
 }
 .navigation .navbar-brand,
 .navbar button,
 .navigation .nav-link,
 .navigation .dropdown-color, footer .text-color {
-  color: #d47c16;
+  color: #ececec;
   font-size: large;
 }
 .navigation .navbar-brand:hover,
@@ -22,12 +22,15 @@ footer {
 .navigation .nav-link:hover,
 footer .text-color:hover
 {
-  color: whitesmoke;
+  color:  	#cbcfd2;
 }
 
 .navigation .dropdown-menu {
-  background: #7e4848;
-  color: whitesmoke;
+  background:  	#767b8d;
+  color: #ececec;
+}
+.body{
+    background: #ececec;
 }
 html, body {
     height: 100%; 
@@ -38,9 +41,11 @@ html, body {
   }
   
   footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     margin: 0;
+    margin-top: 20px;
     width: 100%; 
   }
+  
   

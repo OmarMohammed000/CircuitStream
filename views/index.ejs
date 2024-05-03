@@ -1,3 +1,47 @@
 <%- include('partials/header.ejs') %>
 
+<div class="container text-center mt-2 text-light">
+  <% if(locals.blogContant) {%>
+  <h3 class="text-color"><%= blogHead %></h3>
+  <div class="text-start"><%= blogContant %></div>
+  <button class="btn btn-success">Edit</button>
+  <button class="btn btn-danger">Delete</button>
+  <% } %>
+  <div class="container text-bg-light p-2" > 
+    <img
+      src="https://www.forbesindia.com/media/images/2021/Nov/img_170999__augmentedreality_bg.jpg"
+      alt="Quantum computers"
+      style="height: 500px"
+      class="img-fluid"
+    />
+    <h6 class=" mt-1 text-dark">
+        Augmented reality (AR) and virtual reality (VR) are growing technologies that offer a range of benefits for businesses and individuals.
+        AR overlays digital elements onto the real world, while VR creates a completely digital environment. Both can enhance user experience, improve visualization, and provide more engaging content. By understanding the basics and utilizing the right hardware and software, users can leverage AR and VR for applications like video games, education, and business presentations. This technology has the potential to revolutionize many industries and holds promise for even more exciting future applications.
+    </h6>
+    <a href="/Quantum-computers" class="btn btn-success">Read more</a>
+    <hr class="seprator text-dark" />
+  </div>
+  <div  class="container text-bg-light p-2" >
+    <img
+      src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fic-ez-prod%2Fez%2Fimages%2F8%2F3%2F7%2F4%2F5574738-14-eng-GB%2FQuantum.jpg?source=invchron"
+      alt="an Augmented reality glass"
+      style="height: 500px"
+      class="img-fluid"
+    />
+    <h6 class="mt-1 text-dark">
+      Quantum computing is an exciting new technology that is beginning to
+      revolutionize the world of computing. Measurement-based quantum computing
+      is a relatively new approach to quantum computing that allows for the
+      execution of complex algorithms without the need for the more traditional
+      gate-based architecture. This approach allows for the development of more
+      powerful quantum computers that can tackle difficult problems that are
+      beyond the capabilities of traditional computers. In this blog post, we
+      will explore the concept of measurement-based quantum computing and
+      discuss how it is different from gate-based quantum computing.
+    </h6>
+    <a href="/augmented-reality" class="btn btn-success">Read more</a>
+    
+  </div>
+</div>
+
 <%- include('partials/footer.ejs') %>
