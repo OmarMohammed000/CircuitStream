@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs') %>
+<h2 class="text-center mt-5">Create your blog here</h2>
+<div class="container mt-2">
+<form action="/" method="post">
+    <div class="mb-5">
+    <label for="title" class="form-label">Enter title</label>
+    <input type="text" class="form-control" id="title" name="title" placeholder="Enter your title here "
+    <% if (locals.blogBody){%>
+      value=<%= blogHead %>
+    <% } %>
+    required>
+  </div>
+  <div class="mb-5">
+    <label for="img" class="form-label">Enter img</label>
+    <input type="text" class="form-control" id="img" name="img" placeholder="Enter image url"
+    <% if (locals.blogBody){%>
+      value=<%= blogImg %>
+    <% } %>
+    required>
+  </div>
+  <div class="mb-3">
+    <label for="blogBody" class="form-label">Enter Blog contant here</label>
+    <textarea class="form-control" id="blogBody" name="blogBody" rows="3"required>
+<% if (locals.blogBody){%>       
+<%= blogBody %>
+<% } %>
+     </textarea>
+  </div>
+  <div class="">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+</form>
+<div class="gap"></div>
+
