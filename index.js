@@ -38,7 +38,9 @@ app.get("/blogCreation", (req, res) => {
     const blogHead = req.body["title"];
     const blogImg = req.body["img"];
     const blogBody = req.body["blogBody"];
-    
+    if(!blogs || !blogs.length){
+      count=0;
+    }
     
     // Validate blog title (required)
     if (!blogHead || blogHead.trim() === "") {
@@ -91,7 +93,12 @@ app.post("/blogCreation",(req,res)=>{
   }
 });
 app.post("/reset-content", (req, res) => {
-  delete req.body["locals.blogContant"];
+  let num = req.body["count"];
+  console.log(num);
+  const specificBlog=getBlogByCount(num);
+  let del = blogs.indexOf(specificBlog);
+  console.log(del);
+  blogs.splice(del,1);
   res.redirect("/");
 });
 
