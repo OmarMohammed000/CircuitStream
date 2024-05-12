@@ -20,16 +20,23 @@
   </div>
   <div class="mb-3">
     <label for="blogBody" class="form-label">Enter Blog contant here</label>
-    <textarea class="form-control" id="blogBody" name="blogBody" rows="3"required>
-<% if (locals.blogBody){%>       
-<%= blogBody %>
-<% } %>
-     </textarea>
+    <textarea class="form-control" id="blogBody" name="blogBody" rows="3"required><% if (locals.blogBody){%><%= blogBody%><% }%></textarea>
   </div>
   <div class="">
     <button type="submit" class="btn btn-primary">Submit</button>
   </div>
 </div>
+<% if (locals.errors ) { %>
+  <div class="alert alert-danger" role="alert">
+    <ul>
+      <% console.log("html should be rendered") %>
+      
+      <% for (const error of errors) { %>
+        <li><%= error %></li>
+      <% } %>
+    </ul>
+  </div>
+<% } %>
 </form>
 <div class="gap"></div>
 

@@ -1,21 +1,28 @@
 <%- include('partials/header.ejs') %>
 
 <div class="container text-center mt-2 text-light">
-  <% if(locals.blogContant) {%>
-  <form action="/blogCreation" method="post" class="text-bg-light">
-  <h3 class="text-dark text-center mt-2 "><%= blogHead %></h3>
-  <input type="hidden" name="title" value=<%= blogHead %>>
-  <div class="text-center"> <img src=<%= blogImg %> alt="blog image" class="img-fluid" style="height: 500px"></div>
-  <input type="hidden" value=<%= blogImg  %> name="blogImg">
-  <div class="text-start text-dark mt-1 mb-2"><%= blogContant %>
-  <input type="hidden" value=<%= blogContant %> name="blogContant">
-  </div>
-   <button class="btn btn-success mb-2 rounded-4" type="submit">Edit</button>
-  </form>
-  <form action="/reset-content" method="post" class="text-bg-light mb-2">
-  <button class="btn btn-danger mb-5 rounded-4" type="submit" name="delete" >Delete</button>
-  </form>
-  <% } %>
+  <% if (locals.blogs ) { %>
+    <% for (const blog of blogs) { %>
+      <form action="/blogCreation" method="post" class="text-bg-light">
+        <h3 class="text-dark text-center mt-2 "><span class="me-1"> <%=blog.count   %></span><%= blog.blogHead %></h3>
+        
+        <div class="text-center">
+          <img src="<%= blog.blogImg%>" alt="blog image" class="img-fluid" style="height: 500px">
+        </div>
+        <div class="text-start text-dark mt-1 mb-2"><%= blog.blogBody %></div>
+        <input type="hidden" value=<%= blog.count %> name="count">
+        <button class="btn btn-success mb-2 rounded-4" type="submit">Edit</button>
+      </form>
+      <form action="/reset-content" method="post" class="text-bg-light mb-2">
+        <input type="hidden" value="<%= blog.count %>" name="count">
+        <button class="btn btn-danger mb-5 rounded-4" type="submit" name="delete">Delete</button>
+       
+      </form>
+    <% } %>
+  <% }  %>
+    
+  
+  
   <div class="container text-bg-light p-2" > 
     <img
       src="https://www.forbesindia.com/media/images/2021/Nov/img_170999__augmentedreality_bg.jpg"
