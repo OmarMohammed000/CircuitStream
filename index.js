@@ -77,16 +77,20 @@ app.post("/blogCreation",(req,res)=>{
   let num = req.body["count"];
   
   const specificBlog=getBlogByCount(num);
-  
+ 
    if (specificBlog) {
+    
     const blogHead = specificBlog.blogHead;
+  
     const blogImg = specificBlog.blogImg;
     const blogBody = specificBlog.blogBody;
+    let del = blogs.indexOf(specificBlog);
 
+     blogs.splice(del,1);
     res.render("blog-creation.ejs", {
-      blogHead,
-      blogBody,
-      blogImg,
+      blogHead:blogHead,
+      blogBody:blogBody,
+      blogImg:blogImg,
     });
   } else {
     // Handle case where blog was not found (optional)
