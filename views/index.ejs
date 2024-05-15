@@ -1,43 +1,52 @@
 <%- include('partials/header.ejs') %>
 
 <div class="container text-center mt-2 text-light">
-  <% if (locals.blogs ) { %>
-    <% for (const blog of blogs) { %>
-      <form action="/blogCreation" method="post" class="text-bg-light">
-        <h3 class="text-dark text-center mt-2 "><span class="me-1"> <%=blog.count   %></span><%= blog.blogHead %></h3>
-        
-        <div class="text-center">
-          <img src="<%= blog.blogImg%>" alt="blog image" class="img-fluid" style="height: 500px">
-        </div>
-        <div class="text-start text-dark mt-1 mb-2"><%= blog.blogBody %></div>
-        <input type="hidden" value=<%= blog.count %> name="count">
-        <button class="btn btn-success mb-2 rounded-4" type="submit">Edit</button>
-      </form>
-      <form action="/reset-content" method="post" class="text-bg-light mb-2">
-        <input type="hidden" value="<%=blog.count  %>" name="count">
-        <button class="btn btn-danger mb-5 rounded-4" type="submit" name="delete">Delete</button>
-       
-      </form>
-    <% } %>
-  <% }  %>
-    
-  
-  
-  <div class="container text-bg-light p-2" > 
+  <% if (locals.blogs ) { %> <% for (const blog of blogs) { %>
+  <form action="/blogCreation" method="post" class="text-bg-light">
+    <h3 class="text-dark text-center mt-2"><%= blog.blogHead %></h3>
+
+    <div class="text-center">
+      <img
+        src="<%= blog.blogImg%>"
+        alt="blog image"
+        class="img-fluid"
+        style="height: 500px"
+      />
+    </div>
+    <div class="text-start text-dark mt-1 mb-2"><%= blog.blogBody %></div>
+    <input type="hidden" value="<%" ="blog.count" % /> name="count">
+    <button class="btn btn-success mb-2 rounded-4" type="submit">Edit</button>
+  </form>
+  <form action="/reset-content" method="post" class="text-bg-light mb-2">
+    <input type="hidden" value="<%=blog.count  %>" name="count" />
+    <button class="btn btn-danger mb-5 rounded-4" type="submit" name="delete">
+      Delete
+    </button>
+  </form>
+  <% } %> <% } %>
+
+  <div class="container text-bg-light p-2">
     <img
       src="https://www.forbesindia.com/media/images/2021/Nov/img_170999__augmentedreality_bg.jpg"
       alt="Quantum computers"
       style="height: 500px"
       class="img-fluid"
     />
-    <h6 class=" mt-1 text-dark">
-        Augmented reality (AR) and virtual reality (VR) are growing technologies that offer a range of benefits for businesses and individuals.
-        AR overlays digital elements onto the real world, while VR creates a completely digital environment. Both can enhance user experience, improve visualization, and provide more engaging content. By understanding the basics and utilizing the right hardware and software, users can leverage AR and VR for applications like video games, education, and business presentations. This technology has the potential to revolutionize many industries and holds promise for even more exciting future applications.
+    <h6 class="mt-1 text-dark">
+      Augmented reality (AR) and virtual reality (VR) are growing technologies
+      that offer a range of benefits for businesses and individuals. AR overlays
+      digital elements onto the real world, while VR creates a completely
+      digital environment. Both can enhance user experience, improve
+      visualization, and provide more engaging content. By understanding the
+      basics and utilizing the right hardware and software, users can leverage
+      AR and VR for applications like video games, education, and business
+      presentations. This technology has the potential to revolutionize many
+      industries and holds promise for even more exciting future applications.
     </h6>
     <a href="/Quantum-computers" class="btn btn-success">Read more</a>
     <hr class="seprator text-dark" />
   </div>
-  <div  class="container text-bg-light p-2" >
+  <div class="container text-bg-light p-2">
     <img
       src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fic-ez-prod%2Fez%2Fimages%2F8%2F3%2F7%2F4%2F5574738-14-eng-GB%2FQuantum.jpg?source=invchron"
       alt="an Augmented reality glass"
@@ -56,7 +65,6 @@
       discuss how it is different from gate-based quantum computing.
     </h6>
     <a href="/augmented-reality" class="btn btn-success">Read more</a>
-    
   </div>
 </div>
 
